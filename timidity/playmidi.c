@@ -10,7 +10,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifndef USE_FRAMEWORK
 #include <SDL_rwops.h>
+#else
+#include <SDL/SDL_rwops.h>
+#endif
 
 #include "config.h"
 #include "common.h"

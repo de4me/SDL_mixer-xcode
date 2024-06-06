@@ -22,7 +22,11 @@
 /* This is Mac OS X only, using Core MIDI.
    Mac OS 9 support via QuickTime is in native_midi_mac.c */
 
+#ifndef USE_FRAMEWORK
 #include "SDL_config.h"
+#else
+#include <SDL/SDL_config.h>
+#endif
 
 #if __MACOSX__
 
@@ -32,7 +36,11 @@
 #include <AvailabilityMacros.h>
 
 #include "../SDL_mixer.h"
+#ifndef USE_FRAMEWORK
 #include "SDL_endian.h"
+#else
+#include <SDL/SDL_endian.h>
+#endif
 #include "native_midi.h"
 
 /* Native Midi song */

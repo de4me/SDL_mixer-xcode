@@ -21,8 +21,13 @@
 
 #ifdef MP3_MUSIC
 
+#ifndef USE_FRAMEWORK
 #include <mpg123.h>
 #include "SDL_rwops.h"
+#else
+#include <mpg123/mpg123.h>
+#include <SDL/SDL_rwops.h>
+#endif
 #include "mp3utils.h"
 
 typedef struct

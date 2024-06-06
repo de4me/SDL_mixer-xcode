@@ -28,9 +28,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifndef USE_FRAMEWORK
 #include "SDL.h"
+#else
+#include <SDL/SDL.h>
+#endif
 #include "SDL_mixer.h"
+#ifndef USE_FRAMEWORK
 #include "SDL_endian.h"
+#else
+#include <SDL/SDL_endian.h>
+#endif
 
 #define __MIX_INTERNAL_EFFECT__
 #include "effects_internal.h"

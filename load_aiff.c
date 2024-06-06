@@ -33,7 +33,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifndef USE_FRAMEWORK
 #include "SDL_endian.h"
+#else
+#include <SDL/SDL_endian.h>
+#endif
 #include "SDL_mixer.h"
 #include "load_aiff.h"
 

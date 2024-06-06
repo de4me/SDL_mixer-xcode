@@ -21,7 +21,11 @@
 
 #ifdef MOD_MUSIC
 
+#ifndef USE_FRAMEWORK
 #include "SDL_loadso.h"
+#else
+#include <SDL/SDL_loadso.h>
+#endif
 
 #include "dynamic_mod.h"
 

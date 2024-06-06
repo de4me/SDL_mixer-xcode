@@ -29,7 +29,11 @@
 #include <unistd.h>
 #endif
 
+#ifndef USE_FRAMEWORK
 #include "SDL.h"
+#else
+#include <SDL/SDL.h>
+#endif
 #include "SDL_mixer.h"
 
 #ifdef HAVE_SIGNAL_H

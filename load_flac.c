@@ -28,9 +28,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifndef USE_FRAMEWORK
 #include "SDL_mutex.h"
 #include "SDL_endian.h"
 #include "SDL_timer.h"
+#else
+#include <SDL/SDL_mutex.h>
+#include <SDL/SDL_endian.h>
+#include <SDL/SDL_timer.h>
+#endif
 
 #include "SDL_mixer.h"
 #include "dynamic_flac.h"

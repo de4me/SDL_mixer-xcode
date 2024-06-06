@@ -19,9 +19,15 @@
   3. This notice may not be removed or altered from any source distribution.
 */
 
+#ifndef USE_FRAMEWORK
 #include "SDL_stdinc.h"
 #include "SDL_error.h"
 #include "SDL_rwops.h"
+#else
+#include <SDL/SDL_stdinc.h>
+#include <SDL/SDL_error.h>
+#include <SDL/SDL_rwops.h>
+#endif
 
 #include "mp3utils.h"
 

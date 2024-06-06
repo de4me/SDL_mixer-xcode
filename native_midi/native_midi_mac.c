@@ -18,8 +18,13 @@
      misrepresented as being the original software.
   3. This notice may not be removed or altered from any source distribution.
 */
+#ifndef USE_FRAMEWORK
 #include "SDL_config.h"
 #include "SDL_endian.h"
+#else
+#include <SDL/SDL_config.h>
+#include <SDL/SDL_endian.h>
+#endif
 
 #if __MACOS__ /*|| __MACOSX__ */
 

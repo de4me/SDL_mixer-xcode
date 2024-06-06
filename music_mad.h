@@ -22,9 +22,15 @@
 #ifdef MP3_MAD_MUSIC
 
 #include "mad.h"
+#ifndef SDL_FRAMEWORK
 #include "SDL_rwops.h"
 #include "SDL_audio.h"
 #include "SDL_mixer.h"
+#else
+#include <SDL/SDL_rwops.h>
+#include <SDL/SDL_audio.h>
+#include <SDL/SDL_mixer.h>
+#endif
 #include "mp3utils.h"
 
 #define MAD_INPUT_BUFFER_SIZE	(5*8192)

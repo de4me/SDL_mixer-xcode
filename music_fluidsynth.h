@@ -28,8 +28,13 @@
 #ifdef USE_FLUIDSYNTH_MIDI
 
 #include "dynamic_fluidsynth.h"
+#ifndef SDL_FRAMEWORK
 #include <SDL_rwops.h>
 #include <SDL_audio.h>
+#else
+#include <SDL/SDL_rwops.h>
+#include <SDL/SDL_audio.h>
+#endif
 
 typedef struct {
 	SDL_AudioCVT convert;

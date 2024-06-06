@@ -10,7 +10,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifndef USE_FRAMEWORK
 #include "SDL.h"
+#else
+#include <SDL/SDL.h>
+#endif
 #include "config.h"
 #include "common.h"
 #include "instrum.h"

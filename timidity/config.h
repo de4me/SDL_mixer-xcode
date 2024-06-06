@@ -8,8 +8,13 @@
 
 /* This is for use with the SDL library */
 #define SDL
+#ifndef USE_FRAMEWORK
 #include "SDL_config.h"
 #include "SDL_endian.h"
+#else
+#include <SDL/SDL_config.h>
+#include <SDL/SDL_endian.h>
+#endif
 
 #define TIMIDITY_ERROR_SIZE 1024
 

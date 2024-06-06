@@ -26,9 +26,15 @@
 #else
 #include <libmodplug/modplug.h>
 #endif
+#ifndef SDL_FRAMEWORK
 #include "SDL_rwops.h"
 #include "SDL_audio.h"
 #include "SDL_mixer.h"
+#else
+#include <SDL/SDL_rwops.h>
+#include <SDL/SDL_audio.h>
+#include <SDL/SDL_mixer.h>
+#endif
 
 typedef struct {
 	ModPlugFile *file;

@@ -26,10 +26,17 @@
 #include <stdlib.h>
 #include <string.h>
 
+#ifndef USE_FRAMEWORK
 #include "SDL_audio.h"
 #include "SDL_mutex.h"
 #include "SDL_rwops.h"
 #include "SDL_endian.h"
+#else
+#include <SDL/SDL_audio.h>
+#include <SDL/SDL_mutex.h>
+#include <SDL/SDL_rwops.h>
+#include <SDL/SDL_endian.h>
+#endif
 
 #include "SDL_mixer.h"
 #include "wavestream.h"
